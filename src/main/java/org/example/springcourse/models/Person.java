@@ -7,14 +7,13 @@ import javax.validation.constraints.Size;
 public class Person {
     private int id;
 
-    @NotEmpty(message = "Имя не должно быть пустым")
-    @Size(min = 2, max = 100, message = "Имя должно быть от 2 до 100 символов длиной")
+    @NotEmpty(message = "Name must not be empty")
+    @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters long")
     private String fullName;
 
-    @Min(value = 1900, message = "Год рождения должен быть больше, чем 1900")
+    @Min(value = 1900, message = "Year of birth must be greater than 1900")
     private int yearOfBirth;
 
-    // Конструктор по умолчанию нужен для Spring
     public Person() {
 
     }
